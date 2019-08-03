@@ -6,10 +6,14 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 // style inline html
 module.exports = {
     mode: 'development', // "production" | "development" | "none"  開發模式
-    entry: './src/index.js',
+    //兩個進入口
+    entry: {
+        app: './src/index.js'
+        // app01 :  './src/about.js'
+    },
     devServer: {
         contentBase: './dist',
-        port: 3002,
+        port: 3004,
         open: true
     },
     output: {
@@ -27,7 +31,7 @@ module.exports = {
                         // by default it use publicPath in webpackOptions.output
                         publicPath: './dist'
                     }
-                }, 
+                },
                 'css-loader',
                 'sass-loader'
             ],
@@ -37,12 +41,19 @@ module.exports = {
     plugins: [
         //html 5 plugin
         new HtmlWebpackPlugin({
-            template: './src/index.html'
+            title: '我的首頁',
+            filename: 'index.html', //默認產生的首頁 index.html
+            template: './src/index.html' //我們參考的首頁
+        }),
+        new HtmlWebpackPlugin({
+            title: '關於我們',
+            filename: 'aboutus.html', //默認產生的首頁 index.html
+            template: './src/aboutus.html' //我們參考的首頁
         }),
         new MiniCssExtractPlugin({
             // Options similar to the same options in webpackOptions.output
             // both options are optional
-            filename: "styles.css"
+            filename: "style.css"
         })
     ]
 }
