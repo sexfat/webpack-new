@@ -1,6 +1,5 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const path = require('path');
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 
 // style inline html
@@ -9,7 +8,7 @@ module.exports = {
     entry: './src/index.js',
     devServer: {
         contentBase: './dist',
-        port: 3002,
+        port: 3345,
         open: true
     },
     output: {
@@ -20,14 +19,9 @@ module.exports = {
     module: {
         rules: [{
             test: /\.(sass|scss|css)$/,
-            use: [{
-                    loader: MiniCssExtractPlugin.loader,
-                    options: {
-                        // you can specify a publicPath here
-                        // by default it use publicPath in webpackOptions.output
-                        publicPath: './dist'
-                    }
-                }, 
+            //順序是由下到上  sass > css > style
+            use: [
+                'style-loader',
                 'css-loader',
                 'sass-loader'
             ],
@@ -38,11 +32,6 @@ module.exports = {
         //html 5 plugin
         new HtmlWebpackPlugin({
             template: './src/index.html'
-        }),
-        new MiniCssExtractPlugin({
-            // Options similar to the same options in webpackOptions.output
-            // both options are optional
-            filename: "styles.css"
         })
     ]
 }
