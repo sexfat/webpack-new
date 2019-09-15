@@ -72,14 +72,15 @@ module.exports = {
         //html 5 plugin
         new HtmlWebpackPlugin({
             title: '首頁',
-            inject: 'true',
-            chunks: ['app'],
+            inject: 'body',
+            chunks: ['index'],// 選擇資源載入
             filename: 'index.html', //產生的首頁 index.html
             template: './src/index.html' //我們參考的首頁
         }),
         new HtmlWebpackPlugin({
             title: '關於我們',
-            chunks: ['plugins'], // 選擇資源載入
+            inject: 'body',
+            chunks: ['aboutus'], // 選擇資源載入
             filename: 'aboutus.html', //產生的首頁 index.html
             template: './src/aboutus.html' //我們參考的首頁
         }),
