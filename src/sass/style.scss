@@ -6,6 +6,19 @@ body {
    .box {
     width: 120px;
     height: 30px;
-    background-color: #11ff9c; 
+    background-color: #19f79a; 
    }
+   .btn {
+      width : 100px;
+      height: 20px;
+      background-color: rgb(255, 115, 0);
+      cursor: pointer;
+
+   }
+   .boxs {
+      width: 200px; height: 200px;
+      outline: 20px solid rgb(0, 174, 255);
+      outline-offset: -118px;
+      background-color: rgb(24, 243, 17);
+  }
 }

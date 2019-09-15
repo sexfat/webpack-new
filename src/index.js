@@ -1,12 +1,15 @@
 import  "./sass/style.scss";
-import $ from 'jquery';
+// import $ from 'jquery';
 import Tweenmax from "gsap";
 
 
 $('.box').addClass("box-width");
 const box  =  $('.box');
 Tweenmax.to('.box' , 1 ,{
-  x: 100
+  x: 200,
+  y: 100,
+  repeat: 1,
+  yoyo :  true
 })
 
 
@@ -14,4 +17,4 @@ Tweenmax.to('.box' , 1 ,{
 
 
 
-console.log('oks');
+console.log('index ok');
