@@ -90,7 +90,7 @@ module.exports = {
             // both options are optional
             filename: "./css/[name].css"
         }),
-        //如果 jq 是常用的，就不用使用import，直接使用套件引入 
+        //如果 jq 是常用的，就不用使用import，直接使用套件引入
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery'
