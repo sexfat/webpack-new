@@ -13,8 +13,8 @@ module.exports = {
     mode: 'development', // "production" | "development" | "none"  開發模式
     //兩個進入口
     entry: {
-        app: './src/index.js',
-        plugins: './src/aboutus.js'
+        index: './src/index.js',
+        aboutus: './src/aboutus.js'
     },
     // 打開瀏覽器 server 
     devServer: {

@@ -13,8 +13,4 @@ Tweenmax.to('.box' , 1 ,{
 })
 
 
-
-
-
-
 console.log('index ok');

@@ -1,11 +1,11 @@
-import  "./sass/another.scss";
+// 樣式資源載入
+import  "./sass/aboutus.scss";
 
-console.log('about ok');
-
-//es6
+//es6 測試
 [1, 2, 3].map((n) => n + 1);
 
 
+console.log('about ok');
 
 // import $ from 'jquery';
 // import alert from './alert.js';
