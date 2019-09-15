@@ -40,10 +40,8 @@ https://www.webpackjs.com/guides/installation/
 
 1. `./src/sass/`  sass 開發檔案
 
-2. `./src/xxx.js`  js 開發
-
-scss注入，套件注入都在這支js裡
-注入點在webpack.config.js 選擇要注入哪個頁面
+2. `./src/xxx.js`  js 開發scss注入，套件注入都在這支js裡
+    注入點在webpack.config.js 選擇要注入哪個頁面
 
 
 3. `webpack.cpnfig.js` 檔案配置
@@ -60,22 +58,20 @@ scss注入，套件注入都在這支js裡
         1. MiniCssExtractPlugin
         2. babel
 
-    loader https://www.webpackjs.com/loaders/
+        loader https://www.webpackjs.com/loaders/
 
-    - plugins 使用套件
+4. plugins 使用套件
+   
+HtmlWebpackPlugin  https://webpack.js.org/plugins/html-webpack-plugin/
 
-    #### HtmlWebpackPlugin
-    https://webpack.js.org/plugins/html-webpack-plugin/
-    
-    html 文件產生：src/xxx.html --> dist/xxx.html
-    template: './src/index.html' //來源檔案
-    filename: 'index.html', //目的地檔案
-    
+html 文件產生：src/xxx.html --> dist/xxx.html
+template: './src/index.html' //來源檔案
+filename: 'index.html', //目的地檔案
 
-    ##### MiniCssExtractPlugin
-    https://webpack.js.org/plugins/mini-css-extract-plugin/
     
-    css 文件產生：src/sass/xxx.scss --> dist/css/xxx.css
+MiniCssExtractPlugin https://webpack.js.org/plugins/mini-css-extract-plugin/
+
+css 文件產生：src/sass/xxx.scss --> dist/css/xxx.css
 
 
 
@@ -163,8 +159,9 @@ chunks：允許插入到模板中的一些chunk，不配置此項默認會將ent
 
 
 ## 參考文件
-zh  https://www.cnblogs.com/wonyun/p/6030090.html
-en  https://github.com/jantimon/html-webpack-plugin
+
+- zh  https://www.cnblogs.com/wonyun/p/6030090.html
+- en  https://github.com/jantimon/html-webpack-plugin
  
 
 ## 延伸閱讀
