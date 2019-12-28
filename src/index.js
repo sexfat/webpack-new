@@ -3,11 +3,15 @@ import  "./sass/style.scss";
 import Tweenmax from "gsap";
 
 
+
+
+
+
 $('.box').addClass("box-width");
 const box  =  $('.box');
 Tweenmax.to('.box' , 1 ,{
   x: 200,
-  y: 100,
+  y: 800,
   repeat: 1,
   yoyo :  true
 })

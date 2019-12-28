@@ -1,7 +1,50 @@
 body {
-  background-color: rgb(237, 255, 154);
-  color: rgb(255, 217, 4);
+  background-color: rgb(41, 41, 41);
+  color: rgb(192, 192, 192);
 }
-.wrapper {
-  width: 120px;
+
+
+section {
+  width: 100vw;
+  height: 100vh;
+  h2 {
+    margin: 150px 0 30px;
+    border-bottom: 1px solid #e9e9e9;
+    width: 800px;
+  }
+  .scence {
+    width: 400px;
+
+    overflow: hidden;
+
+    %color {
+      background-color: #e9e9e9;
+    }
+
+    @mixin rect($w,$h){
+      width: $w;
+      height: $h;
+      @extend %color
+    }
+
+    .box_1 {
+      width: 200px;
+      height: 150px;
+      @extend %color
+    }
+   
+
+    .box_2 {
+      width: 200px;
+      height: 30px;
+      margin-bottom: 10px;
+      @extend %color
+    }
+    .box_3 {
+      width: 200px;
+      height: 100px;
+      margin-bottom: 10px;
+      @extend %color
+     }
+  }
 }

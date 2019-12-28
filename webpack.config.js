@@ -14,15 +14,16 @@ module.exports = {
     //兩個進入口
     entry: {
         index: './src/index.js',
-        aboutus: './src/aboutus.js'
+        aboutus: './src/aboutus.js',
+        animationoriginal: './src/animation_original.js'
     },
     // 打開瀏覽器 server 
     devServer: {
         contentBase: './dist',
         host: 'localhost',
-        port: 3004,
+        port: 3006,
         // 指定首頁檔案
-        index: 'index.html',
+        index: 'animation_original.html',
         open: true
     },
     //輸出的資料夾
@@ -78,11 +79,18 @@ module.exports = {
             template: './src/index.html' //我們參考的首頁
         }),
         new HtmlWebpackPlugin({
-            title: '關於我們',
+            title: '動畫練習1',
             inject: 'body',
             chunks: ['aboutus'], // 選擇資源載入
             filename: 'aboutus.html', //產生的首頁 index.html
             template: './src/aboutus.html' //我們參考的首頁
+        }),
+        new HtmlWebpackPlugin({
+            title: '動畫練習2',
+            inject: 'body',
+            chunks: ['animationoriginal'], // 選擇資源載入
+            filename: 'animation_original.html', //產生的首頁 index.html
+            template: './src/animation_original.html' //我們參考的首頁
         }),
         //這個套件是載入 css 檔案
         new MiniCssExtractPlugin({

@@ -1,0 +1,84 @@
+// @import "base";
+
+
+
+@mixin rect($w, $h , $bgc:null){
+   width: $w;
+   height: $h;
+   background-color: $bgc;
+
+}
+
+@mixin location($p  ,$l , $t) {
+   position: $p;
+   left: $l;
+   top: $t;
+}
+
+
+
+section {
+   @include rect(100vw , 100vh);
+   border-bottom: 2px solid rgb(126, 126, 126);
+}
+
+
+
+body {
+   background-color: rgb(39, 39, 39);
+   color: #fff;
+}
+
+
+
+.section_01 {
+   border-bottom: 2px solid rgb(126, 126, 126);
+   .box {
+      @include rect(250px , 250px , #ffd753) ;
+      }
+}
+
+.section_02 {
+   .box {
+      @include rect(250px , 150px , #4dff6a) ;
+      }
+}
+
+.a1{
+   display: block;
+   cursor: pointer;
+}
+
+.section_03 { 
+   background-image: url(https://placem.at/place);
+    background-size: cover;
+
+   .box {
+      @include rect(150px , 150px , #4dff6a) ;
+      margin-top: 10px;
+      box-shadow: 6px 7px 9px 0px #30303069;
+      }
+      .c1 {
+       @include location(relative, 200px ,300px );
+      }
+      .c2 {
+         @include location(relative, 200px ,200px );
+        }
+
+        .c3 {
+         @include location(relative, 300px ,200px );
+        }
+}
+
+
+.section_04 {
+  .box {
+    @include rect(200px, 50px , rgb(228, 20, 37) );
+    margin-top: 10px;
+
+
+  }
+
+
+}
+
