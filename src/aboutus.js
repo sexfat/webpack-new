@@ -7,7 +7,7 @@ import Tweenmax, {
     TweenMax
 } from "gsap";
 
-import ScrollMagic from 'scrollmagic';
+
 
 const tl = new TimelineMax({
     repeat: -1,

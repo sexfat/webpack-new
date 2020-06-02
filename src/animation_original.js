@@ -5,6 +5,10 @@ import Tweenmax, {
   TimelineMax,
   TweenMax
 } from "gsap";
+import fontawesome from "@fortawesome/fontawesome-free/scss/fontawesome.scss";
+import regular from "@fortawesome/fontawesome-free/scss/regular.scss";
+import solid from "@fortawesome/fontawesome-free/scss/solid.scss";
+import brands from "@fortawesome/fontawesome-free/scss/brands.scss";
 
 
 // import  ScrollMagic from 'scrollmagic';

@@ -187,6 +187,28 @@ chunks：允許插入到模板中的一些chunk，不配置此項默認會將ent
   https://www.cnblogs.com/wonyun/p/6030090.html
 
 
+# 基本配置
+```
+module.exports = {
+    entry: '',               // 入口文件
+    output: {},              // 出口文件
+    module: {},              // 处理对应模块
+    plugins: [],             // 对应的插件
+    devServer: {},           // 开发服务器配置
+    mode: 'development'      // 模式配置
+}
+
+作者：chenhongdong
+链接：https://juejin.im/post/5adea0106fb9a07a9d6ff6de
+来源：掘金
+```
+
+
+
+# 圖片打包
+https://juejin.im/post/5adea0106fb9a07a9d6ff6de
+
+
 # 檔案紀錄
 
 1. 1.0.0  第一版釋出 2019.9.15

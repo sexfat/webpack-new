@@ -61,6 +61,33 @@ module.exports = {
                     }
                 }],
                 include: path.resolve(__dirname, 'src'),
+            },
+            //第三組 loader img
+            {
+                test: /\.(png|jpg|jpeg|gif)$/,
+                use: [{
+                    // loader: "url-loader",
+                    loader: "file-loader",
+                    options: {
+                        name: "[name].[ext]?[hash]",
+                        esModule: false,
+                         //limit: 20000,  //size <= 20KB 小於20k的圖片自動轉成 b ase64格式，並不會存在實體圖片
+                        publicPath: "../images/", // 目前資料裡的路徑
+                        outputPath: "./images/" //打包後資料夾的路徑
+                    }
+                }]
+            },
+            //loader font awesome
+            {
+                test: /\.(eot|svg|ttf|woff|woff2)\w*/,
+                // loader: 'file-loader',//超過1000000k 
+                loader: 'url-loader?limit:8192',//超過1000000k 
+                options : {
+                    name: '[name].[ext]',
+                    esModule: false,
+                    publicPath: "../webfonts/", // 目前資料裡的路徑
+                    outputPath: "./webfonts/" //打包後資料夾的路徑
+                }
             }
         ]
 
@@ -69,12 +96,12 @@ module.exports = {
     plugins: [
         //清理舊的檔案
         new CleanWebpackPlugin(),
-    
+
         //html 5 plugin
         new HtmlWebpackPlugin({
             title: '首頁',
             inject: 'body',
-            chunks: ['index'],// 選擇資源載入
+            chunks: ['index'], // 選擇資源載入
             filename: 'index.html', //產生的首頁 index.html
             template: './src/index.html' //我們參考的首頁
         }),

@@ -2,6 +2,11 @@ import  "./sass/style.scss";
 // import $ from 'jquery';
 import Tweenmax from "gsap";
 
+import fontawesome from "@fortawesome/fontawesome-free/scss/fontawesome.scss";
+import regular from "@fortawesome/fontawesome-free/scss/regular.scss";
+import solid from "@fortawesome/fontawesome-free/scss/solid.scss";
+import brands from "@fortawesome/fontawesome-free/scss/brands.scss";
+
 
 
 
