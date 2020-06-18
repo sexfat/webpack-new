@@ -20,7 +20,7 @@ module.exports = {
     devServer: {
         contentBase: './dist',
         host: 'localhost',
-        port: 3004,
+        port: 3006,
         // 指定首頁檔案
         index: 'index.html',
         open: true
@@ -60,7 +60,19 @@ module.exports = {
                     }
                 }],
                 include: path.resolve(__dirname, 'src'),
-            }
+            },
+            {
+                test: /\.(png|jpg|jpe?g|gif)$/i,
+                use: [{
+                    loader: 'file-loader',
+                    options: {
+                        publicPath: 'assets',
+                        outputPath: 'img/aa',
+                        name: '[name].[ext]'
+                    }
+                }, 
+              ],
+            },
         ]
 
     },
@@ -68,12 +80,12 @@ module.exports = {
     plugins: [
         //清理舊的檔案
         new CleanWebpackPlugin(),
-    
+
         //html 5 plugin
         new HtmlWebpackPlugin({
             title: '首頁',
             inject: 'body',
-            chunks: ['index'],// 選擇資源載入
+            chunks: ['index'], // 選擇資源載入
             filename: 'index.html', //產生的首頁 index.html
             template: './src/index.html' //我們參考的首頁
         }),
