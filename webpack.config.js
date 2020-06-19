@@ -7,6 +7,8 @@ const {
     CleanWebpackPlugin
 } = require('clean-webpack-plugin');
 
+const ASSET_PATH = process.env.ASSET_PATH || '/';
+
 
 // style inline html
 module.exports = {
@@ -20,7 +22,7 @@ module.exports = {
     devServer: {
         contentBase: './dist',
         host: 'localhost',
-        port: 3006,
+        port: 3008,
         // 指定首頁檔案
         index: 'index.html',
         open: true
@@ -66,8 +68,9 @@ module.exports = {
                 use: [{
                     loader: 'file-loader',
                     options: {
-                        publicPath: 'assets',
-                        outputPath: 'img/aa',
+                        publicPath: '../assets/',
+                        esModule: false,
+                        outputPath: 'assets/',
                         name: '[name].[ext]'
                     }
                 }, 

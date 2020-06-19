@@ -2,7 +2,7 @@ import  "./sass/style.scss";
 // import $ from 'jquery';
 import Tweenmax from "gsap";
 
-import  './img/aa/1150.jpg';
+import  './img/1151.jpg';
 
 
 $('.box').addClass("box-width");
