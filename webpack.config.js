@@ -7,6 +7,8 @@ const {
     CleanWebpackPlugin
 } = require('clean-webpack-plugin');
 
+const HtmlWebpackPartialsPlugin = require('html-webpack-partials-plugin');
+
 const ASSET_PATH = process.env.ASSET_PATH || '/';
 
 
@@ -99,6 +101,7 @@ module.exports = {
             filename: 'aboutus.html', //產生的首頁 index.html
             template: './src/aboutus.html' //我們參考的首頁
         }),
+    
         //這個套件是載入 css 檔案
         new MiniCssExtractPlugin({
             // Options similar to the same options in webpackOptions.output
@@ -109,6 +112,13 @@ module.exports = {
         new webpack.ProvidePlugin({
             $: 'jquery',
             jQuery: 'jquery'
+        }),
+        // html樣板功能
+        new HtmlWebpackPartialsPlugin({
+            path : path.join(__dirname, './src/layout/nav.html'),
+            location : 'navbar',
+            template_filename : ['index.html' , 'aboutus.html']
         })
+
     ]
 }

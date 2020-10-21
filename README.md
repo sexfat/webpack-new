@@ -164,6 +164,18 @@ chunks：允許插入到模板中的一些chunk，不配置此項默認會將ent
 - en  https://github.com/jantimon/html-webpack-plugin
  
 
+
+## html-webpack-partials-plugin  模板套件的使用
+
+安裝 `npm i -D html-webpack-partials-plugin`
+
+網址 ： https://www.npmjs.com/package/html-webpack-partials-plugin
+
+
+
+
+
+
 ## 延伸閱讀
 
 1. webpack 二三事：如何讓 CommonsChunkPlugin() 發揮最大效益
